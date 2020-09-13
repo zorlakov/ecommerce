@@ -5,7 +5,7 @@ import CustomButton from '../custom-botton/custom-button.component';
 
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
-import './sign-up.styles.scs';
+import './sign-up.styles.scss';
 
 class SignUp extends React.Component {
   constructor() {
@@ -23,7 +23,7 @@ class SignUp extends React.Component {
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
-    if (password != confirmPassword) {
+    if (password !== confirmPassword) {
       alert('passwords do not match');
       return;
     }
@@ -86,8 +86,8 @@ class SignUp extends React.Component {
 
           <FormInput
             type='password'
-            name='password'
-            value={password}
+            name='confirmPassword'
+            value={confirmPassword}
             onChange={this.handleChange}
             label='Confirm password'
             required
