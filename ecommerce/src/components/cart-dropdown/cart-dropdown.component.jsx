@@ -17,6 +17,7 @@ const CartDropdown = ({ cartItems }) => (
 
 const mapStateToProps = ({ cart: { cartItems } }) => ({
   cartItems,
+  // Alternative: take whole state, cartItems: selectCartItems(state) -- with selector
 });
 
 export default connect(mapStateToProps)(CartDropdown);
